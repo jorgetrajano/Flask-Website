@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="text-center row container-fluid">
+        <h1 class="mt-5">Área Restrita da Lustin</h1>
+        <div class="col"></div>
+        <div class="col">
+            <form method="POST" action="" class="border mt-5 p-5">
+                {{  form_CriarConta.csrf_token  }}
+                <legend>Criar Usuário</legend>
+                <fieldset>
+                    <div class="form-floating mb-3">
+                      {{  form_CriarConta.username(class="form-control")  }}
+                      <label>Usuário</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      {{  form_CriarConta.email(class="form-control")  }}
+                      <label>Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      {{  form_CriarConta.cpf_representante(class="form-control")  }}
+                      <label>CPF</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      {{  form_CriarConta.client(class="form-control")  }}
+                      <label>Nome e Sobrenome</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      {{  form_CriarConta.contato(class="form-control")  }}
+                      <label>Contato</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      {{  form_CriarConta.senha(class="form-control")  }}
+                      <label>Crie uma senha</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      {{  form_CriarConta.confirmar_senha(class="form-control")  }}
+                      <label>Confirmar senha</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      {{  form_CriarConta.tipo(class="form-control")  }}
+                      <label>Tipo de Cliente</label>
+                    </div>
+                </fieldset>
+                {{  form_CriarConta.botao_submit_criar_conta(class="btn btn-outline-success mt-4")  }}
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+
+
+
+{% endblock %}

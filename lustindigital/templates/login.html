@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+    <div class="container-fluid text-center row bg-initial">
+        <h1 class="mt-5">Faça o login para acessar o seu espaço Lustin!</h1>
+        <div class="col-md-5 container">
+            <form method="POST" action="" class="border mt-5 p-5">
+                {{  form_login.csrf_token  }}
+                <legend>Login</legend>
+                <fieldset>
+                    <div class="form-floating mb-3">
+                      {{  form_login.username(class="form-control")  }}
+                      <label>Usuário</label>
+                    </div>
+                    <div class="form-floating">
+                      {{  form_login.senha(class="form-control")  }}
+                      <label>Senha</label>
+                    </div>
+                    <div class="form-group mt-3">
+                        {{  form_login.lembrar_dados(class="form-check-input")  }}
+                        {{  form_login.lembrar_dados.label(class="form-check-label")  }}
+                    </div>
+                </fieldset>
+                {{  form_login.botao_submit_login(class="btn btn-outline-success mt-4")  }}
+            </form>
+        </div>
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,33 @@
+.tam {
+    max-width:600px;
+    max-height:500px;
+    width: auto;
+    height: auto;
+    padding-right: 5px;
+}
+
+.bg-initial {
+    background-color: #fffff3;
+    width: 100%;
+}
+
+.teste-footer {
+    background-color: #4D4294;
+}
+
+.teste-bg {
+    background-image: url("img-team/bg.jpg");
+}
+
+.fixarRodape {
+    bottom: 0;
+    padding: 5px;
+    margin-bottom: 10px;
+    position: static;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-ctt {
+    padding: 3px;
+}
