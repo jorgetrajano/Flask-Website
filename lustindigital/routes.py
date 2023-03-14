@@ -47,7 +47,7 @@ def criar_conta():
     form_CriarConta = FormCriarConta()
 
     if form_CriarConta.validate_on_submit() and 'botao_submit_criar_conta' in request.form:
-        senha_cript = bcrypt.generate_password_hash(form_CriarConta.senha.data)
+        senha_cript = bcrypt.generate_password_hash(form_CriarConta.senha.data).decode("utf-8")
         usuario = Usuario(username=form_CriarConta.username.data, email=form_CriarConta.email.data, senha=senha_cript, cpf_representante=form_CriarConta.cpf_representante.data, client=form_CriarConta.client.data, contato=form_CriarConta.contato.data, tipo=form_CriarConta.tipo.data)
         with app.app_context():
             database.session.add(usuario)
